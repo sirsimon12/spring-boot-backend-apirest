@@ -28,8 +28,10 @@ public class Cliente implements Serializable {
 	private Long id;
 	
 	//@Colum se usa cuando los campos de la tabla se llama diferente a las propiedades de la clase.
+	@Column(nullable=false)
 	private String nombre;
 	private String apellido;
+	@Column(nullable=false,unique=true) //Aqui se indica que no puede ser null el email y debe de ser un valor unico
 	private String email;
 	
 	@Column(name = "create_at")
